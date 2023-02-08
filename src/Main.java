@@ -9,6 +9,8 @@ public class Main {
         task6();
         task7();
         task8();
+        extraTask1();
+        extraTask2();
     }
 
     public static void task1() {
@@ -109,5 +111,38 @@ public class Main {
                 System.out.println(cometYear);
             }
         }
+    }
+
+    public static void extraTask1() {
+        System.out.println("Extra task 1");
+        for (int i = 1; i <= 30; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i + ": ping pong");
+                continue;
+            }
+            if (i % 3 == 0) {
+                System.out.println(i + ": ping");
+                continue;
+            }
+            if (i % 5 == 0) {
+                System.out.println(i + ": pong");
+                continue;
+            }
+            System.out.println(i + ":");
+        }
+    }
+
+    public static void extraTask2() {
+        System.out.println("Extra task 2");
+        int num1 = 0;
+        int num2 = 1;
+        int rez;
+        System.out.print(num1 + " " + num2 + " ");
+        do {
+            rez = num1 + num2;
+            num1 = num2;
+            num2 = rez;
+            System.out.print(rez + " ");
+        } while (rez < 34);
     }
 }
