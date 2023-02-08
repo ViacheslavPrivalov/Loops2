@@ -4,11 +4,11 @@ public class Main {
         task1();
         task2();
         task3();
-//        task1();
-//        task1();
-//        task1();
-//        task1();
-//        task1();
+        task4();
+        task5();
+        task6();
+        task7();
+        task8();
     }
 
     public static void task1() {
@@ -46,5 +46,69 @@ public class Main {
             totalPopulation = totalPopulation + numOfBirths - numOfDeaths;
             System.out.println("Год " + i + ", численность населения составляет " + totalPopulation);
         }
+    }
+
+    public static void task4() {
+        System.out.println("Задача4");
+        double percent = 0.07;
+        int deposit = 15_000;
+        int month = 0;
+        while (deposit <= 12_000_000) {
+            month++;
+            deposit += deposit * percent;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + deposit + " рублей");
+        }
+        System.out.println(month);
+    }
+
+    public static void task5() {
+        System.out.println("Задача5");
+        double percent = 0.07;
+        int deposit = 15_000;
+        int month = 0;
+        while (deposit <= 12_000_000) {
+            month++;
+            deposit += deposit * percent;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + deposit + " рублей");
+            }
+        }
+    }
+
+    public static void task6() {
+        System.out.println("Задача6");
+        double percent = 0.07;
+        int deposit = 15_000;
+        int month = 0;
+        while (month <= 9 * 12) {
+            month++;
+            deposit += deposit * percent;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + deposit + " рублей");
+            }
+        }
+        System.out.println(deposit);
+    }
+
+    public static void task7() {
+        System.out.println("Задача7");
+        int friday = 3;
+        for (; friday <= 31; friday += 7) {
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
+        }
+    }
+
+    public static void task8() {
+        System.out.println("Задача8");
+        int currentYear = 2023;
+        int previousYears = 200;
+        int nextYears = 100;
+        int cometYear = 0;
+        for (; cometYear <= currentYear + nextYears; cometYear += 79) {
+            if (cometYear >= currentYear - previousYears) {
+                System.out.println(cometYear);
+            }
+        }
+
     }
 }
