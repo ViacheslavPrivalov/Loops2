@@ -138,11 +138,11 @@ public class Main {
         int num2 = 1;
         int rez;
         System.out.print(num1 + " " + num2 + " ");
-        do {
+        for (int i = 0; i < 8; i++) {
             rez = num1 + num2;
             num1 = num2;
             num2 = rez;
             System.out.print(rez + " ");
-        } while (rez < 34);
+        }
     }
 }
